@@ -25,6 +25,8 @@ struct SomeView: View {
         VStack{
             HStack{
                 
+                
+                
                 TextField("予定", text: $schedule)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 150)
