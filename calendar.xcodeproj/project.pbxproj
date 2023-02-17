@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		9B0BC592299865ED00F1D2D9 /* SomeVIew2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BC591299865ED00F1D2D9 /* SomeVIew2.swift */; };
 		9B0F28B42998788100FA3528 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F28B32998788100FA3528 /* UserDefaultManager.swift */; };
+		9B0F28B629989C0600FA3528 /* ShowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F28B529989C0600FA3528 /* ShowView.swift */; };
 		9B37903B29865FD7006973F5 /* calendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37903A29865FD7006973F5 /* calendarApp.swift */; };
-		9B37903D29865FD7006973F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37903C29865FD7006973F5 /* ContentView.swift */; };
+		9B37903D29865FD7006973F5 /* JanuaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37903C29865FD7006973F5 /* JanuaryView.swift */; };
 		9B37903F29865FD7006973F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B37903E29865FD7006973F5 /* Assets.xcassets */; };
 		9B37904229865FD7006973F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B37904129865FD7006973F5 /* Preview Assets.xcassets */; };
-		9B37904929877B4E006973F5 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37904829877B4E006973F5 /* SomeView.swift */; };
+		9B37904929877B4E006973F5 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37904829877B4E006973F5 /* InputView.swift */; };
 		9B379067298F789A006973F5 /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B379066298F789A006973F5 /* SelectView.swift */; };
 		9B379069298F7A16006973F5 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B379068298F7A16006973F5 /* SecondView.swift */; };
 		9B37906B298F7E20006973F5 /* MarchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37906A298F7E20006973F5 /* MarchView.swift */; };
@@ -24,12 +25,13 @@
 /* Begin PBXFileReference section */
 		9B0BC591299865ED00F1D2D9 /* SomeVIew2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeVIew2.swift; sourceTree = "<group>"; };
 		9B0F28B32998788100FA3528 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		9B0F28B529989C0600FA3528 /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
 		9B37903729865FD7006973F5 /* calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B37903A29865FD7006973F5 /* calendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarApp.swift; sourceTree = "<group>"; };
-		9B37903C29865FD7006973F5 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9B37903C29865FD7006973F5 /* JanuaryView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = JanuaryView.swift; sourceTree = "<group>"; };
 		9B37903E29865FD7006973F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B37904129865FD7006973F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9B37904829877B4E006973F5 /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
+		9B37904829877B4E006973F5 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		9B379066298F789A006973F5 /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		9B379068298F7A16006973F5 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		9B37906A298F7E20006973F5 /* MarchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarchView.swift; sourceTree = "<group>"; };
@@ -69,16 +71,17 @@
 			children = (
 				9B37903A29865FD7006973F5 /* calendarApp.swift */,
 				9B379066298F789A006973F5 /* SelectView.swift */,
-				9B37903C29865FD7006973F5 /* ContentView.swift */,
+				9B37903C29865FD7006973F5 /* JanuaryView.swift */,
 				9B0F28B32998788100FA3528 /* UserDefaultManager.swift */,
 				9B379068298F7A16006973F5 /* SecondView.swift */,
-				9B37904829877B4E006973F5 /* SomeView.swift */,
+				9B37904829877B4E006973F5 /* InputView.swift */,
 				9B0BC591299865ED00F1D2D9 /* SomeVIew2.swift */,
 				9B37903E29865FD7006973F5 /* Assets.xcassets */,
 				9B37904029865FD7006973F5 /* Preview Content */,
 				9B37906A298F7E20006973F5 /* MarchView.swift */,
 				9B37906C298F7E84006973F5 /* AprilView.swift */,
 				9B37906E298F7EA7006973F5 /* MayView.swift */,
+				9B0F28B529989C0600FA3528 /* ShowView.swift */,
 			);
 			path = calendar;
 			sourceTree = "<group>";
@@ -163,14 +166,15 @@
 			files = (
 				9B0BC592299865ED00F1D2D9 /* SomeVIew2.swift in Sources */,
 				9B379069298F7A16006973F5 /* SecondView.swift in Sources */,
+				9B0F28B629989C0600FA3528 /* ShowView.swift in Sources */,
 				9B379067298F789A006973F5 /* SelectView.swift in Sources */,
 				9B37906F298F7EA7006973F5 /* MayView.swift in Sources */,
 				9B0F28B42998788100FA3528 /* UserDefaultManager.swift in Sources */,
 				9B37906D298F7E84006973F5 /* AprilView.swift in Sources */,
-				9B37903D29865FD7006973F5 /* ContentView.swift in Sources */,
+				9B37903D29865FD7006973F5 /* JanuaryView.swift in Sources */,
 				9B37903B29865FD7006973F5 /* calendarApp.swift in Sources */,
 				9B37906B298F7E20006973F5 /* MarchView.swift in Sources */,
-				9B37904929877B4E006973F5 /* SomeView.swift in Sources */,
+				9B37904929877B4E006973F5 /* InputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

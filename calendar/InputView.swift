@@ -8,7 +8,8 @@
 import SwiftUI
 
 
-struct SomeView: View {
+struct InputView: View {
+    
     @State var theDate = Date()
     @State var schedule = ""
     @State var theDate2 = Date()
@@ -203,6 +204,6 @@ struct SomeView: View {
 
 struct SomeView_Previews: PreviewProvider {
     static var previews: some View {
-        SomeView()
+        InputView()
     }
 }
