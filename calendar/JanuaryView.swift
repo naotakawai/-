@@ -21,7 +21,7 @@ enum JanuaryViewSheetItem: Hashable, Identifiable {
 
 struct JanuaryView: View {
     
-//    @State var isModal: Bool = false
+    //    @State var isModal: Bool = false
     @State var inputModal: Bool = false
     @State var showingSheet: JanuaryViewSheetItem?
     var body: some View {
@@ -33,7 +33,7 @@ struct JanuaryView: View {
                 .font(.system(size: 50.0))
             Text("1月")
                 .font(.system(size:40.0))
-                
+            
             HStack(spacing: 0) {
                 
                 
@@ -69,10 +69,10 @@ struct JanuaryView: View {
             }
             HStack(spacing: 0){
                 Button {
-//                    isModal = true
+                    //                    isModal = true
                     showingSheet = .showingScheduleList(year: 2023, month: 1, day: 1)
-                    let schedule = UserDefaultManager.getSchedule(year: 2023, month: 1, day: 1)
-                    print(schedule)
+//                    let schedule = UserDefaultManager.getSchedule(year: 2023, month: 1, day: 1)
+//                    print(schedule)
                     //                    UserDefaultManager.setSchedule(year: 2023, month: 1, day: 1, schedule: "温泉にいく")
                 }
                 
@@ -108,281 +108,279 @@ struct JanuaryView: View {
                             .font(.system(size: 15.0))
                             .foregroundColor(.black)
                     }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("4")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("5")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("6")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button {
-//                    isModal = true
-//                } label: {
-//                    VStack{
-//                        Text("7")
-//                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
-//                            .font(.system(size: 15.0))
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 4)
+                    
+                } label: {
+                    VStack{
+                        Text("4")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button {showingSheet = .showingScheduleList(year: 2023, month: 1, day: 5)
+                    
+                } label: {
+                    VStack{
+                        Text("5")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 6)
+                    
+                } label: {
+                    VStack{
+                        Text("6")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button {
+                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 7)
+                } label: {
+                    VStack{
+                        Text("7")
+                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
+                            .font(.system(size: 15.0))
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                
                 
             }
-//            HStack(spacing: 0) {
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("8")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.red)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("9")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.red)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("10")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("11")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("12")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("13")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button {
-//                    isModal = true
-//                } label: {
-//                    VStack{
-//                        Text("14")
-//                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
-//                            .font(.system(size: 15.0))
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//
-//
-//            }
-//
-//
-//            HStack(spacing: 0) {
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("15")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.red)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("16")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("17")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("18")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("19")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("20")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button {
-//                    isModal = true
-//                } label: {
-//                    VStack{
-//                        Text("21")
-//                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
-//                            .font(.system(size: 15.0))
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//
-//
-//            }
-//            HStack(spacing: 0) {
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("22")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.red)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("23")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("24")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("25")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("26")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("27")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button {
-//                    isModal = true
-//                } label: {
-//                    VStack{
-//                        Text("28")
-//                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
-//                            .font(.system(size: 15.0))
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//
-//
-//            }
-//
-//            HStack(spacing: 0)   {
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("29")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.red)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("30")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//                Button { isModal = true
-//
-//                } label: {
-//                    VStack{
-//                        Text("31")
-//
-//                            .font(.system(size: 15.0))
-//                            .foregroundColor(.black)
-//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-//
-//
+            HStack(spacing: 0) {
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 8)
+                    
+                } label: {
+                    VStack{
+                        Text("8")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.red)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 9)
+                    
+                } label: {
+                    VStack{
+                        Text("9")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.red)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button {showingSheet = .showingScheduleList(year: 2023, month: 1, day: 10)
+                    
+                } label: {
+                    VStack{
+                        Text("10")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 11)
+                    
+                } label: {
+                    VStack{
+                        Text("11")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 12)
+                    
+                } label: {
+                    VStack{
+                        Text("12")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 13)
+                } label: {
+                    VStack{
+                        Text("13")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button {
+                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 14)
+                } label: {
+                    VStack{
+                        Text("14")
+                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
+                            .font(.system(size: 15.0))
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
                 
-//            }
+                
+            }
+            
+            
+            HStack(spacing: 0) {
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 15)
+                    
+                } label: {
+                    VStack{
+                        Text("15")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.red)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 16)
+                    
+                } label: {
+                    VStack{
+                        Text("16")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 17)
+                    
+                } label: {
+                    VStack{
+                        Text("17")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 18)
+                    
+                } label: {
+                    VStack{
+                        Text("18")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 19)
+                    
+                } label: {
+                    VStack{
+                        Text("19")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 20)
+                    
+                } label: {
+                    VStack{
+                        Text("20")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button {
+                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 21)
+                } label: {
+                    VStack{
+                        Text("21")
+                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
+                            .font(.system(size: 15.0))
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                
+                
+            }
+            HStack(spacing: 0) {
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 22)
+                    
+                } label: {
+                    VStack{
+                        Text("22")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.red)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 23)
+                    
+                } label: {
+                    VStack{
+                        Text("23")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button {showingSheet = .showingScheduleList(year: 2023, month: 1, day: 24)
+                    
+                } label: {
+                    VStack{
+                        Text("24")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 25)
+                } label: {
+                    VStack{
+                        Text("25")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 26)
+                    
+                } label: {
+                    VStack{
+                        Text("26")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 27)
+                    
+                } label: {
+                    VStack{
+                        Text("27")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button {
+                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 28)
+                } label: {
+                    VStack{
+                        Text("28")
+                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
+                            .font(.system(size: 15.0))
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                
+                
+            }
+            
+            HStack(spacing: 0)   {
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 29)
+                    
+                } label: {
+                    VStack{
+                        Text("29")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.red)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 30)
+                } label: {
+                    VStack{
+                        Text("30")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                Button { showingSheet = .showingScheduleList(year: 2023, month: 1, day: 31)
+                    
+                } label: {
+                    VStack{
+                        Text("31")
+                        
+                            .font(.system(size: 15.0))
+                            .foregroundColor(.black)
+                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+                
+                
+                
+            }
             
             Spacer()
-                
+            
             Button{ showingSheet = .showingInputView
+                
                 
             }label: {
                 
@@ -400,6 +398,12 @@ struct JanuaryView: View {
             .shadow(color: .gray, radius: 3, x: 3, y: 3)
             .padding(EdgeInsets(top: 140, leading: 280, bottom: 16.0, trailing: 16.0)) //
         }
+        
+        
+        
+        
+        
+        .padding(.bottom, 300)
         .sheet(item: $showingSheet, content: { item in
             switch item {
             case .showingScheduleList(let year, let month, let day):
@@ -409,12 +413,6 @@ struct JanuaryView: View {
                 InputView()
             }
         })
-
-       
-       
-        
-        .padding(.bottom, 300)
-        
     }
 }
 

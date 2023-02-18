@@ -13,6 +13,7 @@ struct SelectView: View {
     
     var body: some View {
         TabView(selection: $selectedTag) {
+//            次回タブビューを変える
             JanuaryView().tabItem { Text("1月") }.tag(1)
 //            SecondView().tabItem { Text("2月") }.tag(2)
         }
