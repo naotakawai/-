@@ -11,7 +11,7 @@ struct ShowView: View {
     
     var body: some View {
         VStack {
-            Text("\(year), \(month), \(month)")
+            Text("\(year), \(month), \(day)")
             
             
             

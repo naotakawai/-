@@ -41,19 +41,26 @@ struct InputView: View {
                 Text(theDate.description(with: Locale(identifier: "ja_JP")))
                    
                 Button {
-                    UserDefaults.standard.set(schedule, forKey: "schedulebox")
-                    //                    設定した時間と現在の時間との差を求める
-                    let currentDate: Date = Date()
-                    let span: TimeInterval = theDate.timeIntervalSince(currentDate)
-                    print("設定した時間は現在から\(span)秒後です")
-                    //                    ローカル通知を設定する
-                    let content = UNMutableNotificationContent()
-                    content.title = ""
-                    content.body = schedule
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
-                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
-                    UNUserNotificationCenter.current().add(request)
+                    let calendar = Calendar.current
+                    let components = calendar.dateComponents([.year, .month, .day], from: theDate)
+                    let year = components.year!
+                    let month = components.month!
+                    let day = components.day!
                     
+                    let schedules = UserDefaultManager .getSchedule(year: year, month: month, day: day)
+//                    UserDefaults.standard.set(schedule, forKey: "schedulebox")
+//                    //                    設定した時間と現在の時間との差を求める
+//                    let currentDate: Date = Date()
+//                    let span: TimeInterval = theDate.timeIntervalSince(currentDate)
+//                    print("設定した時間は現在から\(span)秒後です")
+//                    //                    ローカル通知を設定する
+//                    let content = UNMutableNotificationContent()
+//                    content.title = ""
+//                    content.body = schedule
+//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
+//                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
+//                    UNUserNotificationCenter.current().add(request)
+//
                 } label: {
                     Text("保存")
                         .foregroundColor(.white)
