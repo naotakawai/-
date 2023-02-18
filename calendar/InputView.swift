@@ -20,21 +20,26 @@ struct InputView: View {
     @State var schedule4 = ""
     @State var theDate5 = Date()
     @State var schedule5 = ""
+    @EnvironmentObject var schedule: ShareDate
     
     
     var body: some View {
         VStack{
             
-            HStack{
+            VStack{
                 
                 
                 
                 TextField("予定", text: $schedule)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 150)
+               
+                   
                 
                 DatePicker(selection: $theDate, label: { Text("") })
                     .environment(\.locale, Locale(identifier: "ja_JP"))
+                Text(schedule)
+                Text(theDate.description(with: Locale(identifier: "ja_JP")))
+                   
                 Button {
                     UserDefaults.standard.set(schedule, forKey: "schedulebox")
                     //                    設定した時間と現在の時間との差を求める
@@ -51,125 +56,130 @@ struct InputView: View {
                     
                 } label: {
                     Text("保存")
+                        .foregroundColor(.white)
                 }
+                .frame(width: 100, height: 60)
+                .background(Color.green)
+                .cornerRadius(30.0)
+                .shadow(color: .gray, radius: 3, x: 3, y: 3)
                 
                 
                 
             }
             
             
-            HStack{
-                
-                TextField("予定", text: $schedule2)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 150)
-                DatePicker(selection: $theDate2, label: { Text("") })
-                    .environment(\.locale, Locale(identifier: "ja_JP"))
-                Button {
-                    UserDefaults.standard.set(schedule2, forKey: "schedulebox2")
-                    //                    設定した時間と現在の時間との差を求める
-                    let currentDate: Date = Date()
-                    let span: TimeInterval = theDate2.timeIntervalSince(currentDate)
-                    print("設定した時間は現在から\(span)秒後です")
-                    //                    ローカル通知を設定する
-                    let content = UNMutableNotificationContent()
-                    content.title = ""
-                    content.body = schedule2
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
-                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
-                    UNUserNotificationCenter.current().add(request)
-                    
-                } label: {
-                    Text("保存")
-                }
-                
-                
-                
-            }
-            HStack{
-                
-                TextField("予定", text: $schedule3)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 150)
-                DatePicker(selection: $theDate3, label: { Text("") })
-                    .environment(\.locale, Locale(identifier: "ja_JP"))
-                Button {
-                    UserDefaults.standard.set(schedule3, forKey: "schedulebox3")
-                    //                    設定した時間と現在の時間との差を求める
-                    let currentDate: Date = Date()
-                    let span: TimeInterval = theDate3.timeIntervalSince(currentDate)
-                    print("設定した時間は現在から\(span)秒後です")
-                    //                    ローカル通知を設定する
-                    let content = UNMutableNotificationContent()
-                    content.title = ""
-                    content.body = schedule3
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
-                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
-                    UNUserNotificationCenter.current().add(request)
-                    
-                } label: {
-                    Text("保存")
-                }
-                
-                
-                
-            }
-            HStack{
-                
-                TextField("予定", text: $schedule4)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 150)
-                DatePicker(selection: $theDate4, label: { Text("") })
-                    .environment(\.locale, Locale(identifier: "ja_JP"))
-                Button {
-                    UserDefaults.standard.set(schedule4, forKey: "schedulebox2")
-                    //                    設定した時間と現在の時間との差を求める
-                    let currentDate: Date = Date()
-                    let span: TimeInterval = theDate4.timeIntervalSince(currentDate)
-                    print("設定した時間は現在から\(span)秒後です")
-                    //                    ローカル通知を設定する
-                    let content = UNMutableNotificationContent()
-                    content.title = ""
-                    content.body = schedule4
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
-                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
-                    UNUserNotificationCenter.current().add(request)
-                    
-                } label: {
-                    Text("保存")
-                }
-                
-                
-                
-            }
-            HStack{
-                
-                TextField("予定", text: $schedule5)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 150)
-                DatePicker(selection: $theDate5, label: { Text("") })
-                    .environment(\.locale, Locale(identifier: "ja_JP"))
-                Button {
-                    UserDefaults.standard.set(schedule5, forKey: "schedulebox2")
-                    //                    設定した時間と現在の時間との差を求める
-                    let currentDate: Date = Date()
-                    let span: TimeInterval = theDate5.timeIntervalSince(currentDate)
-                    print("設定した時間は現在から\(span)秒後です")
-                    //                    ローカル通知を設定する
-                    let content = UNMutableNotificationContent()
-                    content.title = ""
-                    content.body = schedule5
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
-                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
-                    UNUserNotificationCenter.current().add(request)
-                    
-                } label: {
-                    Text("保存")
-                }
-                
-                
-                
-            }
+//            HStack{
+//
+//                TextField("予定", text: $schedule2)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//                    .frame(width: 150)
+//                DatePicker(selection: $theDate2, label: { Text("") })
+//                    .environment(\.locale, Locale(identifier: "ja_JP"))
+//                Button {
+//                    UserDefaults.standard.set(schedule2, forKey: "schedulebox2")
+//                    //                    設定した時間と現在の時間との差を求める
+//                    let currentDate: Date = Date()
+//                    let span: TimeInterval = theDate2.timeIntervalSince(currentDate)
+//                    print("設定した時間は現在から\(span)秒後です")
+//                    //                    ローカル通知を設定する
+//                    let content = UNMutableNotificationContent()
+//                    content.title = ""
+//                    content.body = schedule2
+//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
+//                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
+//                    UNUserNotificationCenter.current().add(request)
+//
+//                } label: {
+//                    Text("保存")
+//                }
+//
+//
+//
+//            }
+//            HStack{
+//
+//                TextField("予定", text: $schedule3)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//                    .frame(width: 150)
+//                DatePicker(selection: $theDate3, label: { Text("") })
+//                    .environment(\.locale, Locale(identifier: "ja_JP"))
+//                Button {
+//                    UserDefaults.standard.set(schedule3, forKey: "schedulebox3")
+//                    //                    設定した時間と現在の時間との差を求める
+//                    let currentDate: Date = Date()
+//                    let span: TimeInterval = theDate3.timeIntervalSince(currentDate)
+//                    print("設定した時間は現在から\(span)秒後です")
+//                    //                    ローカル通知を設定する
+//                    let content = UNMutableNotificationContent()
+//                    content.title = ""
+//                    content.body = schedule3
+//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
+//                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
+//                    UNUserNotificationCenter.current().add(request)
+//
+//                } label: {
+//                    Text("保存")
+//                }
+//
+//
+//
+//            }
+//            HStack{
+//
+//                TextField("予定", text: $schedule4)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//                    .frame(width: 150)
+//                DatePicker(selection: $theDate4, label: { Text("") })
+//                    .environment(\.locale, Locale(identifier: "ja_JP"))
+//                Button {
+//                    UserDefaults.standard.set(schedule4, forKey: "schedulebox2")
+//                    //                    設定した時間と現在の時間との差を求める
+//                    let currentDate: Date = Date()
+//                    let span: TimeInterval = theDate4.timeIntervalSince(currentDate)
+//                    print("設定した時間は現在から\(span)秒後です")
+//                    //                    ローカル通知を設定する
+//                    let content = UNMutableNotificationContent()
+//                    content.title = ""
+//                    content.body = schedule4
+//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
+//                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
+//                    UNUserNotificationCenter.current().add(request)
+//
+//                } label: {
+//                    Text("保存")
+//                }
+//
+//
+//
+//            }
+//            HStack{
+//
+//                TextField("予定", text: $schedule5)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//                    .frame(width: 150)
+//                DatePicker(selection: $theDate5, label: { Text("") })
+//                    .environment(\.locale, Locale(identifier: "ja_JP"))
+//                Button {
+//                    UserDefaults.standard.set(schedule5, forKey: "schedulebox2")
+//                    //                    設定した時間と現在の時間との差を求める
+//                    let currentDate: Date = Date()
+//                    let span: TimeInterval = theDate5.timeIntervalSince(currentDate)
+//                    print("設定した時間は現在から\(span)秒後です")
+//                    //                    ローカル通知を設定する
+//                    let content = UNMutableNotificationContent()
+//                    content.title = ""
+//                    content.body = schedule5
+//                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: span, repeats: false)
+//                    let request = UNNotificationRequest(identifier: "Notification ID", content: content, trigger: trigger)
+//                    UNUserNotificationCenter.current().add(request)
+//
+//                } label: {
+//                    Text("保存")
+//                }
+//
+//
+//
+//            }
             
             
         }

@@ -20,6 +20,7 @@
 		9B37906B298F7E20006973F5 /* MarchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37906A298F7E20006973F5 /* MarchView.swift */; };
 		9B37906D298F7E84006973F5 /* AprilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37906C298F7E84006973F5 /* AprilView.swift */; };
 		9B37906F298F7EA7006973F5 /* MayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37906E298F7EA7006973F5 /* MayView.swift */; };
+		9B63555E29A052660070D3A3 /* ShareDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B63555D29A052660070D3A3 /* ShareDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9B37906A298F7E20006973F5 /* MarchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarchView.swift; sourceTree = "<group>"; };
 		9B37906C298F7E84006973F5 /* AprilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprilView.swift; sourceTree = "<group>"; };
 		9B37906E298F7EA7006973F5 /* MayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MayView.swift; sourceTree = "<group>"; };
+		9B63555D29A052660070D3A3 /* ShareDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				9B37906C298F7E84006973F5 /* AprilView.swift */,
 				9B37906E298F7EA7006973F5 /* MayView.swift */,
 				9B0F28B529989C0600FA3528 /* ShowView.swift */,
+				9B63555D29A052660070D3A3 /* ShareDate.swift */,
 			);
 			path = calendar;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				9B0BC592299865ED00F1D2D9 /* SomeVIew2.swift in Sources */,
 				9B379069298F7A16006973F5 /* SecondView.swift in Sources */,
 				9B0F28B629989C0600FA3528 /* ShowView.swift in Sources */,
+				9B63555E29A052660070D3A3 /* ShareDate.swift in Sources */,
 				9B379067298F789A006973F5 /* SelectView.swift in Sources */,
 				9B37906F298F7EA7006973F5 /* MayView.swift in Sources */,
 				9B0F28B42998788100FA3528 /* UserDefaultManager.swift in Sources */,

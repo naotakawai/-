@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct JanuaryView: View {
+    
     @State var isModal: Bool = false
     @State var inputModal: Bool = false
     
@@ -26,33 +27,33 @@ struct JanuaryView: View {
                 
                 
                 Text("日")
-                    .frame(width: 50,height: 50)
+                    .frame(width: 50,height: 20)
                     .border(Color.black)
-                    .font(.system(size: 30.0))
+                    .font(.system(size: 15.0))
                 Text("月")
                 
-                    .frame(width: 50,height: 50)
+                    .frame(width: 50,height: 20)
                     .border(Color.black)
-                    .font(.system(size: 30.0))
+                    .font(.system(size: 15.0))
                 Text("火")
                 
-                    .frame(width: 50,height: 50)
+                    .frame(width: 50,height: 20)
                     .border(Color.black)
-                    .font(.system(size: 30.0))
+                    .font(.system(size: 15.0))
                 
                 Text("水")
-                    .frame(width: 50,height: 50)
+                    .frame(width: 50,height: 20)
                     .border(Color.black)
-                    .font(.system(size: 30.0))
+                    .font(.system(size: 15.0))
                 Text("木")
-                    .frame(width: 50,height: 50).border(Color.black)
-                    .font(.system(size: 30.0))
+                    .frame(width: 50,height: 20).border(Color.black)
+                    .font(.system(size: 15.0))
                 Text("金")
-                    .frame(width: 50,height: 50).border(Color.black)
-                    .font(.system(size: 30.0))
+                    .frame(width: 50,height: 20).border(Color.black)
+                    .font(.system(size: 15.0))
                 Text("土")
-                    .frame(width: 50,height: 50).border(Color.black)
-                    .font(.system(size: 30.0))
+                    .frame(width: 50,height: 20).border(Color.black)
+                    .font(.system(size: 15.0))
                 
             }
             HStack(spacing: 0){
@@ -369,7 +370,7 @@ struct JanuaryView: View {
             
             
             .sheet(isPresented: $isModal, content: {
-                ShowView()
+                 ShowView()
                     .presentationDetents([.medium, .large])
             }
             )
@@ -387,7 +388,7 @@ struct JanuaryView: View {
             
             
             .frame(width: 60, height: 60)
-            .background(Color.orange)
+            .background(Color.green)
             .cornerRadius(30.0)
             .shadow(color: .gray, radius: 3, x: 3, y: 3)
             .padding(EdgeInsets(top: 140, leading: 280, bottom: 16.0, trailing: 16.0)) //
