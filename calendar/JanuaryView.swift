@@ -370,7 +370,7 @@ struct JanuaryView: View {
             
             
             .sheet(isPresented: $isModal, content: {
-                 ShowView()
+                ShowView(year: 2023, month: 1, day: 1)
                     .presentationDetents([.medium, .large])
             }
             )

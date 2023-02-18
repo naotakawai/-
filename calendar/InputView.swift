@@ -20,7 +20,7 @@ struct InputView: View {
     @State var schedule4 = ""
     @State var theDate5 = Date()
     @State var schedule5 = ""
-    @EnvironmentObject var schedule: ShareDate
+    
     
     
     var body: some View {
