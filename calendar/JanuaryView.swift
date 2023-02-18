@@ -7,12 +7,22 @@
 
 import SwiftUI
 
+enum JanuaryViewSheetItem: Hashable, Identifiable {
+    var id: Self{
+        return self
+    }
+    case showingScheduleList(year: Int, month: Int, day: Int)
+}
+
+
+
+
 
 struct JanuaryView: View {
     
-    @State var isModal: Bool = false
+//    @State var isModal: Bool = false
     @State var inputModal: Bool = false
-    
+    @State var showingSheet: JanuaryViewSheetItem?
     var body: some View {
         
         VStack(alignment: .leading,spacing: 0) {
@@ -58,7 +68,8 @@ struct JanuaryView: View {
             }
             HStack(spacing: 0){
                 Button {
-                    isModal = true
+//                    isModal = true
+                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 1)
                     let schedule = UserDefaultManager.getSchedule(year: 2023, month: 1, day: 1)
                     print(schedule)
                     //                    UserDefaultManager.setSchedule(year: 2023, month: 1, day: 1, schedule: "温泉にいく")
@@ -78,8 +89,8 @@ struct JanuaryView: View {
                     
                     
                 } .frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
+                Button {
+                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 2)
                 } label: {
                     VStack{
                         Text("2")
@@ -87,8 +98,8 @@ struct JanuaryView: View {
                             .font(.system(size: 15.0))
                             .foregroundColor(.red)
                     }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
+                Button {
+                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 2)
                 } label: {
                     VStack{
                         Text("3")
@@ -96,284 +107,278 @@ struct JanuaryView: View {
                             .font(.system(size: 15.0))
                             .foregroundColor(.black)
                     }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("4")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("5")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("6")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button {
-                    isModal = true
-                } label: {
-                    VStack{
-                        Text("7")
-                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
-                            .font(.system(size: 15.0))
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                
-                
-            }
-            HStack(spacing: 0) {
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("8")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.red)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("9")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.red)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("10")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("11")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("12")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("13")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button {
-                    isModal = true
-                } label: {
-                    VStack{
-                        Text("14")
-                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
-                            .font(.system(size: 15.0))
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("4")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("5")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("6")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button {
+//                    isModal = true
+//                } label: {
+//                    VStack{
+//                        Text("7")
+//                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
+//                            .font(.system(size: 15.0))
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//
                 
             }
+//            HStack(spacing: 0) {
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("8")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.red)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("9")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.red)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("10")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("11")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("12")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("13")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button {
+//                    isModal = true
+//                } label: {
+//                    VStack{
+//                        Text("14")
+//                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
+//                            .font(.system(size: 15.0))
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//
+//
+//            }
+//
+//
+//            HStack(spacing: 0) {
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("15")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.red)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("16")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("17")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("18")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("19")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("20")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button {
+//                    isModal = true
+//                } label: {
+//                    VStack{
+//                        Text("21")
+//                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
+//                            .font(.system(size: 15.0))
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//
+//
+//            }
+//            HStack(spacing: 0) {
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("22")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.red)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("23")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("24")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("25")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("26")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("27")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button {
+//                    isModal = true
+//                } label: {
+//                    VStack{
+//                        Text("28")
+//                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
+//                            .font(.system(size: 15.0))
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//
+//
+//            }
+//
+//            HStack(spacing: 0)   {
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("29")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.red)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("30")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//                Button { isModal = true
+//
+//                } label: {
+//                    VStack{
+//                        Text("31")
+//
+//                            .font(.system(size: 15.0))
+//                            .foregroundColor(.black)
+//                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
+//
+//
+                
+//            }
             
-            
-            HStack(spacing: 0) {
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("15")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.red)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("16")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("17")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("18")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("19")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("20")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button {
-                    isModal = true
-                } label: {
-                    VStack{
-                        Text("21")
-                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
-                            .font(.system(size: 15.0))
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                
-                
-            }
-            HStack(spacing: 0) {
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("22")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.red)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("23")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("24")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("25")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("26")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("27")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button {
-                    isModal = true
-                } label: {
-                    VStack{
-                        Text("28")
-                            .frame(width: 50,height: 50,alignment: .leading).border(Color.black)
-                            .font(.system(size: 15.0))
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                
-                
-            }
-            
-            HStack(spacing: 0)   {
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("29")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.red)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("30")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                Button { isModal = true
-                    
-                } label: {
-                    VStack{
-                        Text("31")
-                        
-                            .font(.system(size: 15.0))
-                            .foregroundColor(.black)
-                    }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
-                
-                
-                
-            }
-            
-            
-            .sheet(isPresented: $isModal, content: {
-                ShowView(year: 2023, month: 1, day: 1)
-                    .presentationDetents([.medium, .large])
-            }
-            )
             Spacer()
             Button{ inputModal = true
                 
@@ -393,10 +398,15 @@ struct JanuaryView: View {
             .shadow(color: .gray, radius: 3, x: 3, y: 3)
             .padding(EdgeInsets(top: 140, leading: 280, bottom: 16.0, trailing: 16.0)) //
         }
-        .sheet(isPresented: $inputModal, content: {
-            InputView()
-            
+        
+        .sheet(item: $showingSheet, content: { item in
+            switch item {
+            case .showingScheduleList(let year, let month, let day):
+                ShowView(year: year, month: month, day: day)
+                    .presentationDetents([.medium, .large])
+            }
         })
+
         
         
         .padding(.bottom, 300)
