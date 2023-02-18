@@ -12,6 +12,7 @@ enum JanuaryViewSheetItem: Hashable, Identifiable {
         return self
     }
     case showingScheduleList(year: Int, month: Int, day: Int)
+    case showingInputView
 }
 
 
@@ -99,7 +100,7 @@ struct JanuaryView: View {
                             .foregroundColor(.red)
                     }.frame(width: 50,height: 50,alignment: .leading).border(Color.black)}
                 Button {
-                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 2)
+                    showingSheet = .showingScheduleList(year: 2023, month: 1, day: 3)
                 } label: {
                     VStack{
                         Text("3")
@@ -380,7 +381,8 @@ struct JanuaryView: View {
 //            }
             
             Spacer()
-            Button{ inputModal = true
+                
+            Button{ showingSheet = .showingInputView
                 
             }label: {
                 
@@ -398,16 +400,18 @@ struct JanuaryView: View {
             .shadow(color: .gray, radius: 3, x: 3, y: 3)
             .padding(EdgeInsets(top: 140, leading: 280, bottom: 16.0, trailing: 16.0)) //
         }
-        
         .sheet(item: $showingSheet, content: { item in
             switch item {
             case .showingScheduleList(let year, let month, let day):
                 ShowView(year: year, month: month, day: day)
                     .presentationDetents([.medium, .large])
+            case .showingInputView:
+                InputView()
             }
         })
 
-        
+       
+       
         
         .padding(.bottom, 300)
         
