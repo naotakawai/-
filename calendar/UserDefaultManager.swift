@@ -9,7 +9,7 @@ import Foundation
 
 struct UserDefaultManager {
 //    予定を取得する
-    static func getSchedule(year: Int, month: Int, day: Int) -> [String] {
+    static func setSchedule(year: Int, month: Int, day: Int) -> [String] {
         if let schedules = UserDefaults.standard.object(forKey: "\(year)-\(month)-\(day)") as? [String] 
             {
             return schedules
