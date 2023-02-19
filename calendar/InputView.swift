@@ -40,7 +40,9 @@ struct InputView: View {
                     let month = components.month!
                     let day = components.day!
                     
-                    let schedules = UserDefaultManager .setSchedule(year: year, month: month, day: day)
+                    var schedules = UserDefaultManager .getSchedule(year: year, month: month, day: day)
+                    schedules.append(schedule)
+                    UserDefaultManager.setSchedules(year: year, month: month, day: day, schedules: schedules)
                     
                 } label: {
                     Text("保存")

@@ -12,7 +12,7 @@ struct ShowView: View {
     var body: some View {
         VStack {
             Text("\(year), \(month), \(day)")
-            
+            Text(UserDefaultManager.getSchedule(year: year, month: month, day: day).description)
             
             
             
