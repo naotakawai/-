@@ -28,7 +28,7 @@
 		9B0BC591299865ED00F1D2D9 /* SomeVIew2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeVIew2.swift; sourceTree = "<group>"; };
 		9B0F28B32998788100FA3528 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		9B0F28B529989C0600FA3528 /* ShowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowView.swift; sourceTree = "<group>"; };
-		9B37903729865FD7006973F5 /* calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B37903729865FD7006973F5 /* naota-calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "naota-calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B37903A29865FD7006973F5 /* calendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarApp.swift; sourceTree = "<group>"; };
 		9B37903C29865FD7006973F5 /* CalendarView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		9B37903E29865FD7006973F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		9B37903829865FD7006973F5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B37903729865FD7006973F5 /* calendar.app */,
+				9B37903729865FD7006973F5 /* naota-calendar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B37903629865FD7006973F5 /* calendar */ = {
+		9B37903629865FD7006973F5 /* naota-calendar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B37904529865FD7006973F5 /* Build configuration list for PBXNativeTarget "calendar" */;
+			buildConfigurationList = 9B37904529865FD7006973F5 /* Build configuration list for PBXNativeTarget "naota-calendar" */;
 			buildPhases = (
 				9B37903329865FD7006973F5 /* Sources */,
 				9B37903429865FD7006973F5 /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = calendar;
+			name = "naota-calendar";
 			productName = calendar;
-			productReference = 9B37903729865FD7006973F5 /* calendar.app */;
+			productReference = 9B37903729865FD7006973F5 /* naota-calendar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B37903629865FD7006973F5 /* calendar */,
+				9B37903629865FD7006973F5 /* naota-calendar */,
 			);
 		};
 /* End PBXProject section */
@@ -309,7 +309,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"calendar/Preview Content\"";
 				DEVELOPMENT_TEAM = 2KQU2G5S8Q;
 				ENABLE_PREVIEWS = YES;
@@ -325,7 +325,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.naota.kawai.schedule;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naota.calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"calendar/Preview Content\"";
 				DEVELOPMENT_TEAM = 2KQU2G5S8Q;
 				ENABLE_PREVIEWS = YES;
@@ -355,7 +355,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.naota.kawai.schedule;
+				PRODUCT_BUNDLE_IDENTIFIER = com.naota.calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -375,7 +375,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B37904529865FD7006973F5 /* Build configuration list for PBXNativeTarget "calendar" */ = {
+		9B37904529865FD7006973F5 /* Build configuration list for PBXNativeTarget "naota-calendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B37904629865FD7006973F5 /* Debug */,
