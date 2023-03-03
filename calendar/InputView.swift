@@ -17,8 +17,7 @@ struct InputView: View {
     
     
     var body: some View {
-        ZStack{ Color.green
-                .edgesIgnoringSafeArea(.all)
+        
             VStack{
                 
                 
@@ -26,16 +25,21 @@ struct InputView: View {
                 
                 
                 TextField("予定", text: $schedule)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
                     
-                
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(width: 300, height: 100)
+                    .font(.system(size: 30))
                 
                 DatePicker(selection: $theDate, label: { Text("") })
+                    
+                    .background(.white)
+                
                     .environment(\.locale, Locale(identifier: "ja_JP"))
+                    
+                    
                    
-                Text(schedule)
-                Text(theDate.description(with: Locale(identifier: "ja_JP")))
-                    .foregroundColor(.white)
+                
+                    
                 
                 Button {
                     let calendar = Calendar.current
@@ -49,8 +53,10 @@ struct InputView: View {
                     UserDefaultManager.setSchedules(year: year, month: month, day: day, schedules: schedules)
                     
                 } label: {
-                    Text("保存")
+                    Text("追加")
                         .foregroundColor(.red)
+                        .font(.title)
+                        
                 }
                 .frame(width: 100, height: 60)
                 .background(Color.white)
@@ -69,7 +75,7 @@ struct InputView: View {
         }
     }
     
-}
+
 struct SomeView_Previews: PreviewProvider {
     static var previews: some View {
         InputView()

@@ -3,7 +3,7 @@
 import SwiftUI
 
 struct ShowView: View {
-    
+   
     @State var year: Int
     @State var month: Int
     @State var day: Int
@@ -17,7 +17,9 @@ struct ShowView: View {
             Spacer()
             
             
-            Text("\(year), \(month), \(day)")
+            Text("\(year)年 \(month)月 \(day)日")
+                    .font(.system(size: 25))
+                
             
             List{
                 
@@ -34,14 +36,20 @@ struct ShowView: View {
                 
             }.onAppear{
                 schedules = UserDefaultManager.getSchedule(year: year, month: month, day: day)
-            }
-            
-            
+
+        
+                     
         }
             
         }
         
+
     }}
+
+    }
+
+
+
 struct ShowView_Previews: PreviewProvider {
     static var previews: some View {
         ShowView(year: 2023, month: 1, day: 1)
