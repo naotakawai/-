@@ -12,26 +12,30 @@ struct InputView: View {
     
     @State var theDate = Date()
     @State var schedule = ""
-   
+    
     
     
     
     var body: some View {
-        VStack{
-            
-            
+        ZStack{ Color.green
+                .edgesIgnoringSafeArea(.all)
+            VStack{
+                
+                
                 
                 
                 
                 TextField("予定", text: $schedule)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                
+                    
                 
                 
                 DatePicker(selection: $theDate, label: { Text("") })
                     .environment(\.locale, Locale(identifier: "ja_JP"))
+                   
                 Text(schedule)
                 Text(theDate.description(with: Locale(identifier: "ja_JP")))
+                    .foregroundColor(.white)
                 
                 Button {
                     let calendar = Calendar.current
@@ -46,26 +50,26 @@ struct InputView: View {
                     
                 } label: {
                     Text("保存")
-                        .foregroundColor(.white)
+                        .foregroundColor(.red)
                 }
                 .frame(width: 100, height: 60)
-                .background(Color.green)
+                .background(Color.white)
                 .cornerRadius(30.0)
                 .shadow(color: .gray, radius: 3, x: 3, y: 3)
                 
                 
                 
-            
-            
-            
-
+                
+                
+                
+                
+                
+            }
             
         }
-        
     }
+    
 }
-
-
 struct SomeView_Previews: PreviewProvider {
     static var previews: some View {
         InputView()
