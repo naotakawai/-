@@ -4,7 +4,6 @@
 //
 //  Created by 川井尚大 on R 5/01/29.
 //
-
 import SwiftUI
 
 enum JanuaryViewSheetItem: Hashable, Identifiable {
@@ -19,7 +18,7 @@ enum JanuaryViewSheetItem: Hashable, Identifiable {
 
 
 
-struct JanuaryView: View {
+struct CalendarView: View {
     
     //    @State var isModal: Bool = false
     @State var inputModal: Bool = false
@@ -416,8 +415,8 @@ struct JanuaryView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        JanuaryView()
+        CalendarView()
     }
 }
