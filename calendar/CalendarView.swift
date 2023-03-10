@@ -26,6 +26,7 @@ struct CalendarView: UIViewRepresentable {
     }
     func updateUIView(_ uiView: UIViewType, context: Context) {}
 }
+
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarView { dateComponents in }

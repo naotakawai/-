@@ -26,17 +26,21 @@ struct NaotaCalendarView: View {
     var body: some View {
         
         VStack{
-        CalendarView { dateComponents in
-            guard let year = dateComponents.year,
-            let month = dateComponents.month,
-            let day = dateComponents.day else {
-            return
-                            }
-                            showingSheet = .showingScheduleList(year: year, month: month, day: day)
-                        }
-                        .padding()
-                        .navigationTitle("UICalendarView")
-
+            CalendarView { dateComponents in
+                guard let year = dateComponents.year,
+                      let month = dateComponents.month,
+                      let day = dateComponents.day
+                    
+                        
+                      
+                else {
+                    return
+                }
+                showingSheet = .showingScheduleList(year: year, month: month, day: day)
+            }
+            .padding()
+            .navigationTitle("UICalendarView")
+            
             
             
             Button{ showingSheet = .showingInputView
