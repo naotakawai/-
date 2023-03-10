@@ -13,7 +13,11 @@ struct Schedule: Codable, Hashable {
     
     var time: String {
         let formatter = DateFormatter()
-        formatter.timeStyle = .medium
+        
+        
+        formatter.timeStyle = .short
+        formatter.dateFormat = "HH時mm分"
+        formatter.calendar = Calendar(identifier: .japanese)
         return formatter.string(from: date)
     }
 }

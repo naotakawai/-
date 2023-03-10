@@ -21,5 +21,8 @@ struct UserDefaultManager {
     static func setSchedules(year: Int, month: Int, day: Int, schedules: [Schedule]) {
         let encoded: Data = try! JSONEncoder().encode(schedules)
         UserDefaults.standard.set(encoded, forKey: "\(year)-\(month)-\(day)")
+       
     }
 }
+
+

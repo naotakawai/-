@@ -25,10 +25,12 @@ struct ShowView: View {
                     
                     ForEach(schedules, id: \.self) { item in
                         HStack{  Text(item.time)
+                            
                             Text(item.title)
                         }
                     }.onDelete { indexSet in
                         schedules.remove(atOffsets: indexSet)
+                        UserDefaults.standard.removeObject(forKey: "\(year)-\(month)-\(day)")
                         
                         
                     }

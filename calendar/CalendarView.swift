@@ -21,6 +21,10 @@ struct CalendarView: UIViewRepresentable {
     func makeUIView(context: Context) -> some UIView {
         let selection = UICalendarSelectionSingleDate(delegate: context.coordinator)
         let calendarView = UICalendarView()
+        calendarView.calendar = Calendar(identifier: .gregorian)
+        calendarView.locale = Locale(identifier: "ja")
+        calendarView.fontDesign = .monospaced
+        calendarView.tintColor = .green
         calendarView.selectionBehavior = selection
         return calendarView
     }
@@ -30,5 +34,7 @@ struct CalendarView: UIViewRepresentable {
 struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarView { dateComponents in }
+        
+        
     }
 }
